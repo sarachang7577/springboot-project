@@ -11,4 +11,6 @@ public interface StationService {
 
     void updateStation(Integer stationId, StationRequest stationRequest);
 
+    void deleteStationById(Integer stationId);
+
 }

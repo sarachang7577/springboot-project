@@ -72,4 +72,15 @@ public class StationDaoImpl implements StationDao {
         namedParameterJdbcTemplate.update(sql, map);
     }
 
+    @Override
+    public void deleteStationById(Integer stationId) {
+
+        String sql = "DELETE FROM station WHERE station_id = :stationId";
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("stationId", stationId);
+
+        namedParameterJdbcTemplate.update(sql, map);
+    }
+
 }
