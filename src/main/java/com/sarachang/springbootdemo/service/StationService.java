@@ -9,4 +9,6 @@ public interface StationService {
 
     Integer createStation(StationRequest stationRequest);
 
+    void updateStation(Integer stationId, StationRequest stationRequest);
+
 }

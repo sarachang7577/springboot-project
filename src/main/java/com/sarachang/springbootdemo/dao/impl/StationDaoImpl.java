@@ -59,4 +59,17 @@ public class StationDaoImpl implements StationDao {
         return stationId;
     }
 
+    @Override
+    public void updateStation(Integer stationId, StationRequest stationRequest) {
+
+        String sql = "UPDATE station SET station_name = :stationName, updated_date = :updatedDate WHERE station_id = :stationId";
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("stationId", stationId);
+        map.put("stationName", stationRequest.getStationName());
+        map.put("updatedDate", new Date());
+
+        namedParameterJdbcTemplate.update(sql, map);
+    }
+
 }

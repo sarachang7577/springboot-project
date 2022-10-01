@@ -24,4 +24,9 @@ public class StationServiceImpl implements StationService {
         return stationDao.createStation(stationRequest);
     }
 
+    @Override
+    public void updateStation(Integer stationId, StationRequest stationRequest) {
+        stationDao.updateStation(stationId, stationRequest);
+    }
+
 }
