@@ -66,7 +66,7 @@ public class StationNurseMiddleDaoImpl implements StationNurseMiddleDao {
 
     @Override
     public void deleteMiddleByStationId(Integer stationId) {
-        String sql = "DELETE FROM station__nurse WHERE statuin_id = :stationId;";
+        String sql = "DELETE FROM station__nurse WHERE station_id = :stationId;";
 
         Map<String, Object> map = new HashMap<>();
         map.put("stationId", stationId);
