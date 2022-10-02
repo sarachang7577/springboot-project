@@ -17,4 +17,6 @@ public interface NurseService {
 
     void deleteNurseById(Integer nurseId);
 
+    List<Nurse> getNursesByStationId(Integer stationId);
+
 }

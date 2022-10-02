@@ -16,4 +16,6 @@ public interface StationDao {
     void updateStation(Integer stationId, StationRequest stationRequest);
 
     void deleteStationById(Integer stationId);
+
+    List<Station> getStationByNurseId(Integer nurseId);
 }

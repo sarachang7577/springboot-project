@@ -32,6 +32,13 @@ public class StationController {
         return ResponseEntity.status(HttpStatus.OK).body(stationList);
     }
 
+    @GetMapping("/stations/nurses/{nurseId}")
+    public ResponseEntity<List<Station>> getNursesByStationId(@PathVariable Integer nurseId) {
+        List<Station> stationList = stationService.getStationByNurseId(nurseId);
+
+        return ResponseEntity.status(HttpStatus.OK).body(stationList);
+    }
+
     @GetMapping("/stations/{stationId}")
     public ResponseEntity<Station> getStation(@PathVariable Integer stationId) {
         Station station = stationService.getStationById(stationId);

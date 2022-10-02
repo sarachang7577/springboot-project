@@ -1,14 +1,21 @@
 package com.sarachang.springbootdemo.model;
 
 import java.util.Date;
-import java.util.List;
 
-public class Station {
+public class StationNurseMiddle {
 
+    private Integer id;
     private Integer stationId;
-    private String stationName;
+    private Integer nurseId;
     private Date createdDate;
-    private Date updatedDate;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Integer getStationId() {
         return stationId;
@@ -18,12 +25,12 @@ public class Station {
         this.stationId = stationId;
     }
 
-    public String getStationName() {
-        return stationName;
+    public Integer getNurseId() {
+        return nurseId;
     }
 
-    public void setStationName(String stationName) {
-        this.stationName = stationName;
+    public void setNurseId(Integer nurseId) {
+        this.nurseId = nurseId;
     }
 
     public Date getCreatedDate() {
@@ -32,14 +39,6 @@ public class Station {
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
-    }
-
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
     }
 
 }

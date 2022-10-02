@@ -41,4 +41,9 @@ public class NurseServiceImpl implements NurseService {
         nurseDao.deleteNurseById(nurseId);
     }
 
+    @Override
+    public List<Nurse> getNursesByStationId(Integer stationId) {
+        return nurseDao.getNursesByStationId(stationId);
+    }
+
 }

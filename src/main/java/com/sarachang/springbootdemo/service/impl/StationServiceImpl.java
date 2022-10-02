@@ -41,4 +41,9 @@ public class StationServiceImpl implements StationService {
         stationDao.deleteStationById(stationId);
     }
 
+    @Override
+    public List<Station> getStationByNurseId(Integer nurseId) {
+        return stationDao.getStationByNurseId(nurseId);
+    }
+
 }

@@ -16,4 +16,7 @@ public interface NurseDao {
     void updateNurse(Integer nurseId, NurseRequest nurseRequest);
 
     void deleteNurseById(Integer nurseId);
+
+    List<Nurse> getNursesByStationId(Integer stationId);
+
 }
