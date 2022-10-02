@@ -24,6 +24,17 @@ public class StationDaoImpl implements StationDao {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     @Override
+    public List<Station> getStations() {
+        String sql = "SELECT station_id, station_name, created_date, updated_date FROM station";
+
+        Map<String, Object> map = new HashMap<>();
+
+        List<Station> stationList = namedParameterJdbcTemplate.query(sql, map, new StationRowMapper());
+
+        return stationList;
+    }
+
+    @Override
     public Station getStationById(Integer stationId) {
         String sql = "SELECT station_id, station_name, created_date, updated_date FROM station WHERE station_id = :stationId";
 

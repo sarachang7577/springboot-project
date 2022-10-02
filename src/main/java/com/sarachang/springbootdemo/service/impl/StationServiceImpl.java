@@ -1,5 +1,7 @@
 package com.sarachang.springbootdemo.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +15,11 @@ public class StationServiceImpl implements StationService {
 
     @Autowired
     private StationDao stationDao;
+
+    @Override
+    public List<Station> getStations() {
+        return stationDao.getStations();
+    }
 
     @Override
     public Station getStationById(Integer stationId) {

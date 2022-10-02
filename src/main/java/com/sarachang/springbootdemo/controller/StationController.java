@@ -1,5 +1,7 @@
 package com.sarachang.springbootdemo.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,13 @@ public class StationController {
 
     @Autowired
     private StationService stationService;
+
+    @GetMapping("/stations")
+    public ResponseEntity<List<Station>> getStations() {
+        List<Station> stationList = stationService.getStations();
+
+        return ResponseEntity.status(HttpStatus.OK).body(stationList);
+    }
 
     @GetMapping("/stations/{stationId}")
     public ResponseEntity<Station> getStation(@PathVariable Integer stationId) {
