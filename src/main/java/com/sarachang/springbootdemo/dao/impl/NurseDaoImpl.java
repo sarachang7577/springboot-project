@@ -108,7 +108,7 @@ public class NurseDaoImpl implements NurseDao {
 
     @Override
     public List<Nurse> getNursesByStationId(Integer stationId) {
-        String sql = "SELECT id, station_id, nurse_id FROM station__nurse WHERE station_id = :stationId";
+        String sql = "SELECT id, station_id, nurse_id, created_date FROM station__nurse WHERE station_id = :stationId";
 
         Map<String, Object> map = new HashMap<>();
         map.put("stationId", stationId);
