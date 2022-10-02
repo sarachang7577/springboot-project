@@ -90,6 +90,7 @@ public class NurseDaoImpl implements NurseDao {
         map.put("nurseName", nurseRequest.getNurseName());
         map.put("updatedDate", new Date());
 
+        stationNurseMiddleDao.deleteMiddleByNurseId(nurseId);
         stationNurseMiddleDao.createMiddle(nurseRequest.getMiddleList(), nurseId);
 
         namedParameterJdbcTemplate.update(sql, map);
